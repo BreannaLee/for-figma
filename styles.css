@@ -1,0 +1,206 @@
+/* ─ TOKENS ─────────────────────────────── */
+:root{
+  --cream:#F4E8D6;
+  --sage:#B6C4B3;
+  --paper:url('./textures/paper-light.png');
+  --font:'Poppins','Helvetica Neue',Arial,sans-serif;
+}
+
+/* ─ RESET ──────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--sage);color:#000;line-height:1.55}
+
+/* ─ HERO ───────────────────────────────── */
+#hero{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:2rem;          /* ← gives breathing room from stripe */
+  align-items:center;
+  min-height:55vh;
+  background:var(--cream);
+  padding:5rem 2.5rem 3.2rem;
+}
+#hero h1{
+  font-size:clamp(3.4rem,5.2vw+1rem,4.6rem);
+  font-weight:600;
+  line-height:1.15;
+}
+
+/* vertical colour bars (12) */
+#stripes{
+  width:132px;
+  height:100%;
+  background-image:
+    repeating-linear-gradient( to right,
+      #F6B24E 0 11px,
+      #F6B24E 11px 22px,
+      #F2CE8C 22px 33px,
+      #F2CE8C 33px 44px,
+      #F4D4DB 44px 55px,
+      #F4D4DB 55px 66px,
+      #E5A5B4 66px 77px,
+      #E5A5B4 77px 88px,
+      #C38D94 88px 99px,
+      #C38D94 99px 110px,
+      #617E71 110px 121px,
+      #617E71 121px 132px
+    );
+  /* extend more colours neatly */
+  background-size:132px 100%;
+}
+
+/* ─ FOLDER BAR ─────────────────────────── */
+.folder-strip{
+  display:flex;background:var(--cream);
+}
+.folder-btn{
+  --h:78px;
+  height:var(--h);
+  padding-inline:1.7rem;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;font:600 0.8rem/1.15 var(--font);
+  text-transform:uppercase;letter-spacing:.02em;
+  color:var(--txt,#000);
+  background:var(--fill);
+  background-image:var(--paper);background-size:380px;
+  border:none;cursor:pointer;transition:transform .18s ease;
+  clip-path:polygon(4% 0,96% 0,100% 100%,0 100%);
+}
+.folder-btn:hover,
+.folder-btn.open{transform:translateY(-4px)}
+
+.tedio  {--fill:#8F8477}
+.kids   {--fill:#F4D8C6}
+.wings  {--fill:#C66536;min-width:248px}
+.film   {--fill:#E4B6A4}
+.blog   {--fill:#C5D4E2;min-width:175px}
+.about  {--fill:#1D5D25;--txt:#fff;min-width:210px}
+
+/* ─ COLOUR RULES ───────────────────────── */
+.rules{display:grid;grid-auto-rows:12px}
+.rules>div{background:var(--c)}
+
+/* ─ MAIN CANVAS ───────────────────────── */
+#canvas{
+  --current:var(--sage);          /* default */
+  background:var(--current);
+  transition:background .3s ease;
+  padding:4rem 1.8rem 6rem;
+  min-height:120vh;
+}
+.page{margin-inline:auto;max-width:960px}
+.page[hidden]{display:none}
+.page h2{font-size:2rem;font-weight:600;margin-bottom:1rem}
+.page p {margin-bottom:1rem;color:#383838}
+
+/* ─ RESPONSIVE ─────────────────────────── */
+@media(max-width:768px){
+  #stripes{width:80px}
+  .folder-btn{--h:70px;padding-inline:1rem;font-size:0.75rem}
+  .wings{min-width:200px}.about{min-width:180px}
+  .folder-strip{overflow-x:auto;scroll-snap-type:x mandatory}
+  .folder-btn{scroll-snap-align:start}
+}
+/* ─ TOKENS ─────────────────────────────── */
+:root{
+  --cream:#F4E8D6;
+  --sage:#B6C4B3;
+  --paper:url('./textures/paper-light.png');
+  --font:'Poppins','Helvetica Neue',Arial,sans-serif;
+}
+
+/* ─ RESET ──────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--sage);color:#000;line-height:1.55}
+
+/* ─ HERO ───────────────────────────────── */
+#hero{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:2rem;          /* ← gives breathing room from stripe */
+  align-items:center;
+  min-height:55vh;
+  background:var(--cream);
+  padding:5rem 2.5rem 3.2rem;
+}
+#hero h1{
+  font-size:clamp(3.4rem,5.2vw+1rem,4.6rem);
+  font-weight:600;
+  line-height:1.15;
+}
+
+/* vertical colour bars (12) */
+#stripes{
+  width:132px;
+  height:100%;
+  background-image:
+    repeating-linear-gradient( to right,
+      #F6B24E 0 11px,
+      #F6B24E 11px 22px,
+      #F2CE8C 22px 33px,
+      #F2CE8C 33px 44px,
+      #F4D4DB 44px 55px,
+      #F4D4DB 55px 66px,
+      #E5A5B4 66px 77px,
+      #E5A5B4 77px 88px,
+      #C38D94 88px 99px,
+      #C38D94 99px 110px,
+      #617E71 110px 121px,
+      #617E71 121px 132px
+    );
+  /* extend more colours neatly */
+  background-size:132px 100%;
+}
+
+/* ─ FOLDER BAR ─────────────────────────── */
+.folder-strip{
+  display:flex;background:var(--cream);
+}
+.folder-btn{
+  --h:78px;
+  height:var(--h);
+  padding-inline:1.7rem;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;font:600 0.8rem/1.15 var(--font);
+  text-transform:uppercase;letter-spacing:.02em;
+  color:var(--txt,#000);
+  background:var(--fill);
+  background-image:var(--paper);background-size:380px;
+  border:none;cursor:pointer;transition:transform .18s ease;
+  clip-path:polygon(4% 0,96% 0,100% 100%,0 100%);
+}
+.folder-btn:hover,
+.folder-btn.open{transform:translateY(-4px)}
+
+.tedio  {--fill:#8F8477}
+.kids   {--fill:#F4D8C6}
+.wings  {--fill:#C66536;min-width:248px}
+.film   {--fill:#E4B6A4}
+.blog   {--fill:#C5D4E2;min-width:175px}
+.about  {--fill:#1D5D25;--txt:#fff;min-width:210px}
+
+/* ─ COLOUR RULES ───────────────────────── */
+.rules{display:grid;grid-auto-rows:12px}
+.rules>div{background:var(--c)}
+
+/* ─ MAIN CANVAS ───────────────────────── */
+#canvas{
+  --current:var(--sage);          /* default */
+  background:var(--current);
+  transition:background .3s ease;
+  padding:4rem 1.8rem 6rem;
+  min-height:120vh;
+}
+.page{margin-inline:auto;max-width:960px}
+.page[hidden]{display:none}
+.page h2{font-size:2rem;font-weight:600;margin-bottom:1rem}
+.page p {margin-bottom:1rem;color:#383838}
+
+/* ─ RESPONSIVE ─────────────────────────── */
+@media(max-width:768px){
+  #stripes{width:80px}
+  .folder-btn{--h:70px;padding-inline:1rem;font-size:0.75rem}
+  .wings{min-width:200px}.about{min-width:180px}
+  .folder-strip{overflow-x:auto;scroll-snap-type:x mandatory}
+  .folder-btn{scroll-snap-align:start}
+}

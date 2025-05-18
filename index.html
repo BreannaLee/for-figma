@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breanna D Lee — Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- HERO -->
+  <header id="hero">
+    <div id="stripes" aria-hidden="true"></div>
+    <h1>Hi, I’m Breanna D Lee</h1>
+  </header>
+
+  <!-- FOLDER BAR -->
+  <nav class="folder-strip" aria-label="Primary navigation">
+    <button class="folder-btn tedio"  data-folder="tedio"  data-color="#8F8477" aria-controls="tedio"  aria-expanded="false">TEDIO</button>
+    <button class="folder-btn kids"   data-folder="kids"   data-color="#F4D8C6" aria-controls="kids"   aria-expanded="false">WHAT I DID WITH<br>80 CHILDREN!</button>
+    <button class="folder-btn wings"  data-folder="wings"  data-color="#C66536" aria-controls="wings"  aria-expanded="false">WINGS: A BOOK</button>
+    <button class="folder-btn film"   data-folder="film"   data-color="#E4B6A4" aria-controls="film"   aria-expanded="false">FILMMAKER<br>ERA</button>
+    <button class="folder-btn blog"   data-folder="blog"   data-color="#C5D4E2" aria-controls="blog"   aria-expanded="false">MY BLOG</button>
+    <button class="folder-btn about"  data-folder="about"  data-color="#1D5D25" aria-controls="about"  aria-expanded="false">ABOUT</button>
+  </nav>
+
+  <!-- FOUR COLOUR RULES -->
+  <div class="rules">
+    <div style="--c:#CBE6F9"></div>
+    <div style="--c:#E27E4E"></div>
+    <div style="--c:#F7E2D1"></div>
+    <div style="--c:#AAC1B4"></div>
+  </div>
+
+  <!-- MAIN CANVAS -->
+  <main id="canvas" class="canvas">
+    <section id="tedio"  class="page" hidden><h2>TEDIO</h2><p>Add content …</p></section>
+    <section id="kids"   class="page" hidden><h2>What I Did with 80 Children!</h2><p>Add content …</p></section>
+    <section id="wings"  class="page" hidden><h2>Wings: A Book</h2><p>Add content …</p></section>
+    <section id="film"   class="page" hidden><h2>Filmmaker Era</h2><p>Add content …</p></section>
+    <section id="blog"   class="page" hidden><h2>My Blog</h2><p>Add content …</p></section>
+    <section id="about"  class="page" hidden><h2>About</h2><p>Add content …</p></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
